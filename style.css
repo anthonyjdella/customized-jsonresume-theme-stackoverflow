@@ -151,6 +151,7 @@ section .location {
   color: #202931;
   font-size: 1.47rem;
   font-weight: 300;
+  line-height: 1.2;
 }
 
 #header .picture {
@@ -227,7 +228,7 @@ section .location {
   display: inline;
 }
 
-.position, .studyType, .area, .title, .language, .name {
+.position, .studyType, .area, .title, .language {
   font-weight: 600;
 }
 
@@ -240,12 +241,17 @@ section .location {
   font-weight: 400;
 }
 
+.divider {
+  margin: 1em 0;
+  border: 1px solid #ddd;
+}
+
 .section header .date {
   display: block;
   font-size: 1rem;
   padding: .1em 0;
   color: #606d76;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .keywords, .courses {
@@ -374,7 +380,7 @@ section .location {
 
 #languages .item, #skills .item, #interests .item {
   width: 15em;
-  padding: 0 .5em .5em 0;
+  padding: .25em;
   border-bottom: none;
 }
 
@@ -541,7 +547,7 @@ section .location {
 
 @media print {
   #resume {
-    margin: .1em;
+    margin: .5em;
     padding: .1em;
     -ms-word-wrap: break-word;
     word-wrap: break-word;

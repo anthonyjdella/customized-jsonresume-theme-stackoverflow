@@ -10,31 +10,40 @@
 		<div>
 			<h1 class="name">{{name}}</h1>
 			<h2 class="label">{{label}}</h2>
+			<h2 class="label">{{label2}}</h2>
 		</div>
 		{{/if}} 
 		
-		{{#location}}
-		<span class="location">
-			{{#if address}}
-			<span class="address">{{address}},</span> 
-			{{/if}}
-			{{#if postalCode}}
-			<span class="postalCode">{{postalCode}},</span> 
-			{{/if}} 
-			{{#if city}}
-			<span class="city">{{city}},</span> 
-			{{/if}} 
-			{{#if region}}
-			<span class="region">{{region}}</span> 
-			{{/if}} 
-			{{#if countryCode}}
-			<span class="countryCode">{{countryCode}}</span> 
-			{{/if}}
-		</span>
-		{{/location}} 
-		
-		{{#birthDate birth}}
-		{{/birthDate}}
+		<div>
+			{{#personalDetails}}
+				{{#if birthdate}}
+				<span class="birthdate">Born in {{birthdate}}</span>
+				{{/if}}
+				{{#if birthplace}}
+				<span class="birthplace">in {{birthplace}}</span>
+				{{/if}}
+			{{/personalDetails}}
+
+			{{#location}}
+			<div class="location">
+				{{#if address}} 
+				<span class="address">{{address}},</span> 
+				{{/if}}
+				{{#if postalCode}}
+				<span class="postalCode">{{postalCode}},</span> 
+				{{/if}} 
+				{{#if city}}
+				<span class="city">{{city}},</span> 
+				{{/if}} 
+				{{#if region}}
+				<span class="region">{{region}}</span> 
+				{{/if}} 
+				{{#if countryCode}}
+				<span class="countryCode">{{countryCode}}</span> 
+				{{/if}}
+			</div>
+			{{/location}}
+		</div>
 
 		<div id="contact">
 			{{#if website}}
