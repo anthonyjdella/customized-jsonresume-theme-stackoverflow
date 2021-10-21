@@ -1,3 +1,10 @@
+# Customized JSON Resume Theme: Stack Overflow
+
+🖼️ This is a slightly tweaked version of the [Stack Overflow theme](https://github.com/phoinixi/jsonresume-theme-stackoverflow). Tweaked to fit my design preferences. Published on NPM and GitHub Registry.
+
+<details>
+  <summary>Click to expand README.md of the source repository!</summary>
+
 # Stack Overflow theme for jsonresume [![npm version](https://badge.fury.io/js/jsonresume-theme-stackoverflow.svg)](http://badge.fury.io/js/jsonresume-theme-stackoverflow)
 
 **Printable version with custom CSS**
