@@ -1,11 +1,15 @@
 {
-  "name": "jsonresume-theme-stackoverflow-FA5",
-  "version": "1.4.0",
+  "name": "@anthonyjdella/jsonresume-theme-anthonyjdella-stackoverflow",
+  "version": "1.0.0",
   "description": "Stack Overflow theme for JSON Resume",
-  "author": "Francesco Esposito <http://fran.cesco.io>",
+  "author": "Anthony Dellavecchia <leeznon@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/francescoes/jsonresume-theme-stackoverflow"
+    "url": "https://github.com/anthonyjdella/customized-jsonresume-theme-stackoverflow"
+  },
+  "scripts": {
+    "start": "resume serve --theme .",
+    "build": "mkdir -p public && resume export public/index.html --theme \"$(pwd)\""
   },
   "license": "MIT",
   "main": "index.js",

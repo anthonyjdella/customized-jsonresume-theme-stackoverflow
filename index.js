@@ -22,6 +22,33 @@ Handlebars.registerHelper('paragraphSplit', paragraphSplit);
 Handlebars.registerHelper('toLowerCase', toLowerCase);
 Handlebars.registerHelper('spaceToDash', spaceToDash);
 
+Handlebars.registerHelper('ifCond', function (v1, operator, v2, options) {
+	switch (operator) {
+			case '==':
+					return (v1 == v2) ? options.fn(this) : options.inverse(this);
+			case '===':
+					return (v1 === v2) ? options.fn(this) : options.inverse(this);
+			case '!=':
+					return (v1 != v2) ? options.fn(this) : options.inverse(this);
+			case '!==':
+					return (v1 !== v2) ? options.fn(this) : options.inverse(this);
+			case '<':
+					return (v1 < v2) ? options.fn(this) : options.inverse(this);
+			case '<=':
+					return (v1 <= v2) ? options.fn(this) : options.inverse(this);
+			case '>':
+					return (v1 > v2) ? options.fn(this) : options.inverse(this);
+			case '>=':
+					return (v1 >= v2) ? options.fn(this) : options.inverse(this);
+			case '&&':
+					return (v1 && v2) ? options.fn(this) : options.inverse(this);
+			case '||':
+					return (v1 || v2) ? options.fn(this) : options.inverse(this);
+			default:
+					return options.inverse(this);
+	}
+});
+
 function render(resume) {
   const css = readFileSync(`${__dirname}/style.css`, 'utf-8');
   const tpl = readFileSync(`${__dirname}/resume.hbs`, 'utf-8');
