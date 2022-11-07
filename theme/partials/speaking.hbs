@@ -3,35 +3,40 @@
   <header>
     <h2 class='section-title'>Public Speaking <span class="item-count">({{resume.speaking.length}})</span></h2>
   </header>
-
   <section id="speaking">
     {{#each resume.speaking}}
     <section class="speaking-item">
-			{{#if event}}
-
-
+      {{#if topic}}
         {{#if @first}}
         <input id="speaking-item-{{@index}}" type="checkbox" class="toggle-item" checked="checked" />
         {{else}}
         <input id="speaking-item-{{@index}}" type="checkbox" class="toggle-item" />
         {{/if}}
         <label for="speaking-item-{{@index}}"></label>
+      {{/if}}
 
-
-			<header class="clear">
-				{{#if topic}}
-				<div class="topic">{{topic}}</div>
-				{{/if}}
-				<div class="event">{{event}}</div>
-				<div class="date">
-          {{#if date}}
-				  <span class="date">{{MY date}}</span>
+      <header class="clear">
+        <div class="header-left">
+          {{#if event}}
+          <div class="event">
+            {{event}}
+          </div>
           {{/if}}
-				</div>
-			</header>
-			{{/if}}
-
-			{{#if location}}
+          {{#if topic}}
+          <div class="topic">
+            {{topic}}
+          </div>
+          {{/if}}
+        </div>
+        {{#if date}}
+        <div class="date">
+          {{MY date}}
+        </div>
+        {{/if}}
+      </header>
+      
+      <div class="item">
+		{{#if location}}
 			{{#isObject location}}
 			<span class="location">
 				<span class="fas fa-map-marker-alt"></span>
@@ -52,26 +57,12 @@
 			</span>
 			{{/isObject}}
 	    {{/if}}
-
-			{{#if url}}
-    	<span class="url">
-    		<a target="_blank" href="{{url}}">{{url}}</a>
-    	</span> {{/if}} {{#if keywords.length}}
-    	<ul class="keywords">
-      	{{#each keywords}}
-      	<li>{{.}}</li>
-      	{{/each}}
-    	</ul>
-    	{{/if}}
-    	<div class="item" id="speaking-item">
-        {{#if location.length}}
-        <ul class="location">
-          {{#each location}}
-            <li>{{paragraphSplit .}}</li>
-          {{/each}}
-        </ul>
+		{{#if reference}}
+        <span class="reference">
+          <a target="_blank" href="{{reference}}">View the Presentation</a>
+        </span>
         {{/if}}
-    	</div>
+      </div>
     </section>
     {{/each}}
   </section>
