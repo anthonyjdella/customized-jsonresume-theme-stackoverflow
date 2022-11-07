@@ -48,11 +48,6 @@
       {{/if}}
       </span>
       {{/location}}
-      {{#if url}}
-      <span class="website">
-        <a target="_blank" href="{{url}}">{{url}}</a>
-      </span>
-      {{/if}}
       {{#if keywords.length}}
       <ul class="keywords">
         {{#each keywords}}
@@ -61,6 +56,11 @@
       </ul>
       {{/if}}
       <div class="item">
+        {{#if url}}
+        <span class="website">
+          <a target="_blank" href="{{url}}">GitHub Repository</a>
+        </span>
+        {{/if}}
         {{#if summary}}
           <div class="summary">{{paragraphSplit summary}}</div>
         {{/if}}

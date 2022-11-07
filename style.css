@@ -330,7 +330,9 @@ section .location {
 .date,
 .area,
 .studyType,
+.event,
 .title,
+.topic,
 .awarder {
   display: inline;
 }
@@ -338,6 +340,7 @@ section .location {
 .position,
 .studyType,
 .area,
+.event,
 .title,
 .language,
 .name {
@@ -347,6 +350,7 @@ section .location {
 .company::before,
 .institution::before,
 .organization::before,
+.topic::before,
 .awarder::before {
   content: "at ";
 }
@@ -354,6 +358,7 @@ section .location {
 .company,
 .institution,
 .organization,
+.topic,
 .awarder {
   color: #606d76;
   font-weight: 400;
@@ -654,6 +659,7 @@ section .location {
   .company::before,
   .institution::before,
   .organization::before,
+  .topic::before,
   .awarder::before {
     content: "| ";
   }
@@ -693,6 +699,7 @@ section .location {
   .company::before,
   .institution::before,
   .organization::before,
+  .topic::before,
   .awarder::before {
     content: "at ";
   }
