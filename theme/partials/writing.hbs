@@ -1,0 +1,28 @@
+{{#if resume.writing.length}}
+<section class="section">
+  <header>
+    <h2 class='section-title'>Articles <span class="item-count">({{resume.writing.length}})</span></h2>
+  </header>
+  <section id="writing">
+    {{#each resume.writing}}
+    <section class="writing-item">
+      <header class="clear">
+        <ul class="header-left">
+          {{#if name}}
+          <li class="article-name">
+            {{name}}
+            <span class="fas fa-external-link-alt" onclick="window.open('{{reference}}')"></span>
+          </li>
+          {{/if}}
+        </ul>
+        {{#if date}}
+        <div class="date">
+          {{MY date}}
+        </div>
+        {{/if}}
+      </header>
+    </section>
+    {{/each}}
+  </section>
+</section>
+{{/if}}
