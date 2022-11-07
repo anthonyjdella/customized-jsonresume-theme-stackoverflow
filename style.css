@@ -277,7 +277,7 @@ section .location {
   text-transform: uppercase;
   font-weight: 600;
   border: none;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .section > header {
@@ -680,8 +680,38 @@ section .location {
 }
 
 @media print {
-  a:not(.hide-href-print)::after{
+  /* a:not(.hide-href-print)::after{
     content: " (" attr(href) ") ";
+  } */
+  #header h1.name {
+    font-size: 2rem;
+  }
+  #header h2.label {
+    font-size: 1.25rem;
+  }
+  #header .image {
+    width: 8em;
+  }
+  .section header .date {
+    float: right;
+  }
+  .header-left {
+    display: inline-block;
+  }
+  .writing-item {
+    margin: 0 0 0 0 !important;
+  }
+  .section:nth-child(n+8) {
+    display: none;
+  }
+  #speaking .speaking-item:nth-child(n+4){
+    display: none;
+  }
+  #projects .project-item:nth-child(n+4){
+    display: none;
+  }
+  #writing .writing-item:nth-child(n+4){
+    display: none;
   }
   #resume {
     margin: 0.1em;
