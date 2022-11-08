@@ -692,6 +692,12 @@ section .location {
   #header .image {
     width: 8em;
   }
+  #contact {
+    font-size: .85rem;
+  }
+  #profiles {
+    font-size: .85rem;
+  }
   .section header .date {
     float: right;
   }
@@ -735,7 +741,7 @@ section .location {
   }
   .main-summary {
     padding: 0;
-    background: transparent;
+    background: #f1f8ff;
   }
   .section {
     margin: 0.8rem 0;
