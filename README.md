@@ -1,6 +1,6 @@
-# Customized JSON Resume Theme: Stack Overflow
+# Customized JSON Resume Theme: StackOverflow
 
-🖼️ This is a tweaked version of the [Stack Overflow theme](https://github.com/phoinixi/jsonresume-theme-stackoverflow). Tweaked to fit my design preferences. Published on NPM and GitHub Registry.
+🖼️ This is a tweaked version of the [StackOverflow theme](https://github.com/phoinixi/jsonresume-theme-stackoverflow). Tweaked to fit my design preferences. Published on NPM and GitHub Registry.
 
 ## Notable Changes
 
